@@ -55,17 +55,21 @@
 
     */
     converse.initialize({
-        authentication: 'login',
-        auto_away: 300,
-        auto_reconnect: true,
-        bosh_service_url: 'https://conversejs.org/http-bind/', // Please use this connection manager only for testing purposes
-        message_archiving: 'always',
-        view_mode: 'fullscreen'
-    }).then(function () {
-        setTimeout(function () {
-            document.querySelector('.converse-content').style = '';
-        }, 1000);
-    });
+        allow_logout:false,
+//allow_muc_invitations:false,
+//allow_contact_requests:false,
+//authentication:'anonymous',
+//auto_login:true,
+//auto_join_rooms:['anonymous@conference.example.com',],
+//notify_all_room_messages:['anonymous@conference.example.com',],
+bosh_service_url:'http://192.168.2.110:5280/http-bind/',
+//websockets_url:'',
+//jid:'example.com',
+keepalive:true,
+hide_muc_server:true,
+play_sounds:true,
+//show_controlbox_by_default:false,
+strict_plugin_dependencies:false,    });
 </script>
 </body>
 </html>
